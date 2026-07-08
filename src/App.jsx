@@ -30,7 +30,7 @@ import {
 const FONT_IMPORT = `@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap');`;
 
 const WHATSAPP_NUMBER = "905466190607";
-const INSTAGRAM_HANDLE = "seramira_";
+const INSTAGRAM_HANDLE = "seramira__";
 const YOUTUBE_URL = "https://youtube.com/@mirannkartlar8078";
 const BRAND_NAME = "Seramira Kozmetik";
 
