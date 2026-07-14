@@ -276,7 +276,7 @@ function Hero() {
             className="text-3xl sm:text-5xl font-bold uppercase tracking-wide mb-3 drop-shadow-lg"
             style={{ color: "#F5D07C", fontFamily: "'Playfair Display', serif" }}
           >
-            Göğüs Büyütücü Kremi
+            Göğüs Büyütücü Krem
           </h1>
           <h2
             className="text-4xl sm:text-6xl leading-[1.1] text-white drop-shadow-sm mb-5"
