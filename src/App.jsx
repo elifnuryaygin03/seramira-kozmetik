@@ -21,9 +21,7 @@ import {
   Flame,
 } from "lucide-react";
 import {
-  SERUM_IMG,
   AMBER_IMG,
-  GOLDEN_IMG,
   GRAND_IMG,
   SUSUCOCO_IMG,
   IKSIR_IMG,
@@ -32,6 +30,9 @@ import {
   GOGUS_HEDIYE_SET_IMG,
   CILT_LEKELERI_SET_IMG,
   UCLU_SERUM_SET_IMG,
+  AROMATIK_YAG_IMG,
+  KIL_KOKU_KURUTUCU_IMG,
+  GOLDEN_KREM_IMG,
 } from "./product-images.js";
 
 const FONT_IMPORT = `@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap');`;
@@ -44,18 +45,34 @@ const BRAND_NAME = "Seramira Kozmetik";
 const PRODUCTS = [
   {
     id: "golden",
-    category: "Prestij",
+    category: "Göğüs Bölgesel İncelme",
     name: "Golden",
-    desc: "Prestij serimizin amiral ürünü — yoğun besleyici, lüks dokulu krem.",
-    image: GOLDEN_IMG,
+    desc: "Göğüs bölgesine özel, altın parçacıklı yoğun besleyici lüks krem.",
+    image: GOLDEN_KREM_IMG,
     isNew: true,
   },
   {
     id: "grand",
-    category: "Kremler",
+    category: "Göğüs Bölgesel İncelme",
     name: "Grand Set (1-2-3)",
-    desc: "Serum, gündüz kremi ve gece kremi — birlikte kullanılan 3'lü bakım rutini.",
+    desc: "47 farklı bitkisel yağ karışımıyla kişiye özel hazırlanan göğüs bakım kremimiz, gece ve gündüz kullanıma uygundur.",
     image: GRAND_IMG,
+    isNew: true,
+  },
+  {
+    id: "aromatik-masaj-yagi",
+    category: "Cilt Ürünleri",
+    name: "Aromatik Masaj Yağı",
+    desc: "Doğal içerikli, rahatlatıcı kokulu masaj yağı serisi — günlük bakımınıza eşlik eder.",
+    image: AROMATIK_YAG_IMG,
+    isNew: true,
+  },
+  {
+    id: "kil-koku-kurutucu",
+    category: "Kıl Kökü Kurutucu",
+    name: "Kıl Kökü Kurutucu",
+    desc: "Kullanım sıklığını azaltmaya yardımcı, hafif dokulu kıl kökü bakım kremi.",
+    image: KIL_KOKU_KURUTUCU_IMG,
     isNew: true,
   },
   {
@@ -79,13 +96,6 @@ const PRODUCTS = [
     name: "Gençleştirici İksir Hediye Seti",
     desc: "Amber şişe serisi + krem, hediyelik kutuda tam set.",
     image: IKSIRSET_IMG,
-  },
-  {
-    id: "p1",
-    category: "Göğüs Bölgesel İncelme",
-    name: "Göğüs Büyütücü Serum",
-    desc: "Hızlandırılmış formülüyle günlük bakım rutinine eklenen, hafif dokulu serum.",
-    image: SERUM_IMG,
   },
   {
     id: "gogus-hediye-set",
@@ -262,6 +272,12 @@ function Hero() {
           <p className="text-[12px] tracking-[0.3em] uppercase text-white/90 mb-4 font-medium">
             Yeni Sezon
           </p>
+          <h1
+            className="text-3xl sm:text-5xl font-bold uppercase tracking-wide mb-3 drop-shadow-lg"
+            style={{ color: "#F5D07C", fontFamily: "'Playfair Display', serif" }}
+          >
+            Göğüs Büyütücü Kremi
+          </h1>
           <h2
             className="text-4xl sm:text-6xl leading-[1.1] text-white drop-shadow-sm mb-5"
             style={{ fontFamily: "'Playfair Display', serif" }}
@@ -289,14 +305,14 @@ function Hero() {
         <div className="hidden sm:flex justify-center items-end relative">
           <div className="absolute inset-0 bg-white/10 blur-3xl rounded-full" />
           <img
-            src={GOLDEN_IMG}
-            alt="Golden Krem"
-            className="relative w-56 h-56 object-cover rounded-2xl shadow-2xl shadow-black/20 rotate-[-4deg] border-4 border-white/40"
-          />
-          <img
             src={GRAND_IMG}
             alt="Grand Set"
-            className="relative w-64 h-64 object-cover rounded-2xl shadow-2xl shadow-black/20 -ml-8 mb-10 rotate-[3deg] border-4 border-white/40"
+            className="relative w-48 h-48 object-cover rounded-2xl shadow-2xl shadow-black/20 -mr-8 mb-2 rotate-[3deg] border-4 border-white/40"
+          />
+          <img
+            src={GOLDEN_KREM_IMG}
+            alt="Golden Krem"
+            className="relative z-10 w-72 h-72 object-cover rounded-2xl shadow-2xl shadow-black/30 rotate-[-4deg] border-4 border-white/50"
           />
         </div>
       </div>
