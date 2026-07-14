@@ -21,7 +21,6 @@ import {
   Flame,
 } from "lucide-react";
 import {
-  SERUM_IMG,
   AMBER_IMG,
   GOLDEN_IMG,
   GRAND_IMG,
@@ -79,13 +78,6 @@ const PRODUCTS = [
     name: "Gençleştirici İksir Hediye Seti",
     desc: "Amber şişe serisi + krem, hediyelik kutuda tam set.",
     image: IKSIRSET_IMG,
-  },
-  {
-    id: "p1",
-    category: "Göğüs Bölgesel İncelme",
-    name: "Göğüs Büyütücü Serum",
-    desc: "Hızlandırılmış formülüyle günlük bakım rutinine eklenen, hafif dokulu serum.",
-    image: SERUM_IMG,
   },
   {
     id: "gogus-hediye-set",
