@@ -16,6 +16,9 @@ import {
   ShoppingBag,
   Bell,
   X,
+  Leaf,
+  Wind,
+  Flame,
 } from "lucide-react";
 import {
   SERUM_IMG,
@@ -25,6 +28,10 @@ import {
   SUSUCOCO_IMG,
   IKSIR_IMG,
   IKSIRSET_IMG,
+  MIRA_BG_IMG,
+  GOGUS_HEDIYE_SET_IMG,
+  CILT_LEKELERI_SET_IMG,
+  UCLU_SERUM_SET_IMG,
 } from "./product-images.js";
 
 const FONT_IMPORT = `@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap');`;
@@ -75,10 +82,34 @@ const PRODUCTS = [
   },
   {
     id: "p1",
-    category: "Kremler",
-    name: "Sıkılaştırıcı Vücut Serumu",
-    desc: "Günlük bakım rutinine eklenen, hafif dokulu nemlendirici serum.",
+    category: "Göğüs Bölgesel İncelme",
+    name: "Göğüs Büyütücü Serum",
+    desc: "Hızlandırılmış formülüyle günlük bakım rutinine eklenen, hafif dokulu serum.",
     image: SERUM_IMG,
+  },
+  {
+    id: "gogus-hediye-set",
+    category: "Göğüs Bölgesel İncelme",
+    name: "Parfüm Hediyeli Açılışa Özel Göğüs Büyütücü Set",
+    desc: "Açılışa özel, parfüm hediyeli göğüs büyütücü bakım seti.",
+    image: GOGUS_HEDIYE_SET_IMG,
+    isNew: true,
+  },
+  {
+    id: "uclu-serum-set",
+    category: "Göğüs Bölgesel İncelme",
+    name: "Üçlü Serum Set Göğüs Büyütücü",
+    desc: "Farklı boy şişelerden oluşan, göğüs büyütücü etkili üçlü serum seti.",
+    image: UCLU_SERUM_SET_IMG,
+    isNew: true,
+  },
+  {
+    id: "cilt-lekeleri-set",
+    category: "Cilt Ürünleri",
+    name: "Cilt Lekeleri Seti",
+    desc: "Cilt lekelerine yönelik özel formüllü 3'lü bakım seti.",
+    image: CILT_LEKELERI_SET_IMG,
+    isNew: true,
   },
 ];
 
@@ -89,13 +120,24 @@ const CATEGORY_BANNERS = [
   { name: "Yeni Gelenler", icon: Flower2, gradient: "from-[#E3D6C8] to-[#A98A63]" },
 ];
 
-const NAV_CATEGORIES = ["Kremler", "İksirler", "Prestij", "Yeni Gelenler"];
+const NAV_CATEGORIES = [
+  "Kremler",
+  "İksirler",
+  "Prestij",
+  "Cilt Ürünleri",
+  "Göğüs Bölgesel İncelme",
+  "Kıl Kökü Kurutucu",
+  "Yeni Gelenler",
+];
 
 const TAB_CATEGORIES = [
   { name: "Tümü", icon: Heart },
   { name: "Kremler", icon: Droplet },
   { name: "İksirler", icon: SprayCan },
   { name: "Prestij", icon: Sparkles },
+  { name: "Cilt Ürünleri", icon: Leaf },
+  { name: "Göğüs Bölgesel İncelme", icon: Flame },
+  { name: "Kıl Kökü Kurutucu", icon: Wind },
 ];
 
 function buildWhatsAppLink(productName) {
@@ -207,9 +249,11 @@ function Header({ activeCategory, setActiveCategory, mobileMenuOpen, setMobileMe
 /* ---------- Hero (tam genişlik) ---------- */
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#F5EBE3] via-[#EFDCC9] to-[#C8A97E] min-h-[420px] sm:min-h-[520px] flex items-center">
-      <Flower2 className="absolute -left-10 -top-10 w-56 h-56 sm:w-72 sm:h-72 text-white/25 rotate-12" strokeWidth={0.5} />
-      <Flower2 className="absolute -right-14 -bottom-14 w-72 h-72 sm:w-96 sm:h-96 text-white/20 -rotate-12" strokeWidth={0.5} />
+    <section
+      className="relative overflow-hidden min-h-[420px] sm:min-h-[520px] flex items-center bg-cover bg-center"
+      style={{ backgroundImage: `url(${MIRA_BG_IMG})` }}
+    >
+      <div className="absolute inset-0 bg-black/35" />
       <Sparkles className="absolute right-[8%] top-[18%] w-6 h-6 text-white/60 hidden sm:block" strokeWidth={1} />
       <Sparkles className="absolute right-[20%] top-[35%] w-4 h-4 text-white/50 hidden sm:block" strokeWidth={1} />
 
@@ -226,6 +270,9 @@ function Hero() {
             <br />
             <span style={{ fontStyle: "italic" }}>Doğal Işıltı</span>
           </h2>
+          <p className="text-[12px] tracking-[0.25em] uppercase text-white/80 mb-3 font-medium">
+            Göğüs Büyütücü Setleri
+          </p>
           <p className="text-white/90 text-sm sm:text-base max-w-sm mb-8 font-light leading-relaxed">
             Bitkisel içerikli bakım serimizle ışıltınızı ortaya çıkarın.
           </p>
